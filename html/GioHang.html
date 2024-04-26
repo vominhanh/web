@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+
+    <link rel="icon" type="image/x-icon" href="../img/Logo1.png">
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="../css/giohang.css">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+
+    <script src="../js/products.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#tenSP").html(localStorage.getItem("ten"));
+            $("#pic").attr("src", localStorage.getItem("hinhanh"));
+            $("#pic1").attr("src", localStorage.getItem("hinhanh"));
+            $("#reviewSP").html(localStorage.getItem("review"));
+            $("#giaSP").html(localStorage.getItem("gia"));
+            $("#loaiSP").html(localStorage.getItem("loai"));
+            $("#review").html(localStorage.getItem("review"));
+            $("#chatlieu").html(localStorage.getItem("chatlieu"));
+            $("#danhgia").html(localStorage.getItem("danhgia"));
+            $("#loai").html(localStorage.getItem("loai"));
+            $("#kichthuoc").html(localStorage.getItem("kichthuoc"));
+            $("#khoiluong").html(localStorage.getItem("khoiluong"));
+            $("#khoiluongvo").html(localStorage.getItem("khoiluongvo"));
+            $("#mausac").html(localStorage.getItem("mausac"));
+            $("#baogom").html(localStorage.getItem("baogom"));
+
+
+        });
+    </script>
+
+    <style>
+        .slider-product-one-content {
+            background-color: #E5322A;
+            padding: 5px 12px 12px 12px;
+        }
+
+        .product-gallery-one-content-product {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><img style="height: 50px;width: 50px;" src="../img/Logo1.png " alt=""
+                            style="width: 200px;height: 40 px;"></a>
+
+                <li><input style="height: 35px;width: 600px;border-radius: 5px;margin-top: 20px;" type="text"
+                        placeholder="  Tìm kiếm sản phẩm ..... "><i class="" aria-hidden="true"></i></li>
+                <li><a href="GioHang.html">
+                        <button>
+                            <img style="height: 20px;width: 20px;color: #E5322A;" src="../img/shopping-cart.png" alt="">
+                            <b style="padding-top: 30px;">Giỏ Hàng</b>
+
+                        </button> </a> </li>
+                <li>
+                    <a href="dangnhap.html">
+                        <img style="height: 50px;width: 50px;margin-top: 10px;margin-bottom: 10px;"
+                            src="../img/profile.png" alt="">
+                    </a>
+                </li>
+
+
+
+        </div>
+        </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container" style="background-color: rgb(228, 228, 255);border-radius: 5px;">
+            <div class="menu-bar-container">
+                <ul>
+                    <li><a href="index.html">Danh mục sản phẩm </a></li>
+                    <li><a href="sanpham.html"><i class="" aria-hidden="true"></i> Sản phẩm chính hãng </a>
+                    </li>
+                    <li><a href="sanpham.html"><i class="" aria-hidden="true"></i> Sản phẩm nội thất
+                            <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="index.html"> Ghế</a></li>
+                                <li><a href="index.html"> Bàn </a></li>
+                                <li><a href="index.html"> Tủ sách</a></li>
+                                <li><a href="index.html"> Tủ rượu</a></li>
+                                <li><a href="index.html"> Đèn treo tường</a></li>
+                                <li><a href="index.html"> Giường</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="DiaChi.html"> Địa Chỉ</a></li>
+                    <li><a href="#"> Giới thiệu</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="GioiThieuWeb.html">Giới thiệu trang web</a></li>
+                                <li><a href="GioiThieuThanhVien.html">Giới thiệu thành viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gio hang -->
+    <section class="product">
+        <div class="container">
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/05/combo-vo-boc-ghe-luoi-hat-xop-mau-ghi-sang-size-70x70x70cm-homeazvn162431990.jpg">
+                    <div class="product-item-text">
+                        <p><span>835000</span><sup>đ</sup></p>
+                        <h1>Combo vỏ bọc ghế lười + hạt xốp màu ghi sáng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/05/combo-boc-ghe-luoi-hat-xop-mau-do-hoa-van-co-70x70cm-homeazvn152456315.jpg">
+                    <div class="product-item-text">
+                        <p><span>835000</span><sup>đ</sup></p>
+                        <h1>Combo bọc ghế lười hạt xốp màu đỏ hoa văn</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img src="" id="pic">
+                    <div class="product-item-text">
+                        <p><span id="giaSP"> </span></p>
+                        <h1 id="tenSP"></h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/05/vo-ghe-luoi-hat-xop-co-lon-mau-do-hoa-van-ttgl10005-homeazvn014637456.jpg">
+                    <div class="product-item-text">
+                        <p><span>949000</span><sup>đ</sup></p>
+                        <h1>Vỏ ghế lười hạt xốp cỡ lớn màu đỏ hoa văn</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/04/ghe-tua-lung-cao-cap-elbow-khung-sat-vai-long-cuu-ma-pkgh00018-homeazvn220239424.jpg">
+                    <div class="product-item-text">
+                        <p><span>2450000</span><sup>đ</sup></p>
+                        <h1>Ghế tựa lưng cao cấp Elbow khung sắt vải lông cừu</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/04/ghe-sofa-don-thu-gian-maru-khung-sat-boc-long-cuu-ma-pkgh00020-homeazvn235929715.jpg">
+                    <div class="product-item-text">
+                        <p><span>8690000</span><sup>đ</sup></p>
+                        <h1>Ghế sofa đơn thư giãn Maru khung sắt bọc lông cừu</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/02/combo-boc-ghe-luoi-hat-xop-co-lon-mau-do-do-soc-homeazvn0200559.jpg">
+                    <div class="product-item-text">
+                        <p><span>949000</span><sup>đ</sup></p>
+                        <h1>Combo bọc ghế lười hạt xốp cỡ lớn màu đỏ đô sọc</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/02/combo-vo-boc-ghe-luoi-hat-xop-co-lon-mau-xanh-navy-homeazvn014824916.jpg">
+                    <div class="product-item-text">
+                        <p><span>949000</span><sup>đ</sup></p>
+                        <h1>Combo vỏ bọc ghế lười hạt xốp cỡ lớn màu xanh navy</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/07/05/vo-ghe-luoi-hat-xop-co-lon-mau-do-hoa-van-ttgl10005-homeazvn014637456.jpg">
+                    <div class="product-item-text">
+                        <p><span>949000</span><sup>đ</sup></p>
+                        <h1>Vỏ ghế lười hạt xốp cỡ lớn màu đỏ hoa văn</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/03/31/combo-vo-ghe-luoi-hat-xop-lon-mau-xanh-duong-ttgl10001-homeazvn181503973.jpg">
+                    <div class="product-item-text">
+                        <p><span>949000</span><sup>đ</sup></p>
+                        <h1>Combo vỏ ghế lười hạt xốp lớn màu xanh dương</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/03/31/ghe-sofa-go-hien-dai-nuage-dem-bot-bien-ma-blanc001-homeazvn021854183.jpg">
+                    <div class="product-item-text">
+                        <p><span>5450000</span><sup>đ</sup></p>
+                        <h1>Ghế sofa gỗ hiện đại Nuage đệm bọt</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/03/25/ghe-nhua-tua-lung-cao-cap-purity-phong-cach-bac-au-ma-pkgh0017-homeazvn172912300.jpg">
+                    <div class="product-item-text">
+                        <p><span>1390000</span><sup>đ</sup></p>
+                        <h1>Ghế nhựa tựa lưng cao cấp Purity phong cách Bắc Âu</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/01/vo-ghe-luoi-hat-xop-boc-vai-nhung-min-ma-ttgl0007-homeazvn153102353.png">
+                    <div class="product-item-text">
+                        <p><span>665000</span><sup>đ</sup></p>
+                        <h1>Vỏ ghế lười hạt xốp, bọc vải nhung mịn</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2022/08/09/ghe-don-vuong-bang-go-cao-su-tu-nhien-hien-dai-gia-re-vline-601-homeazvn-3085210742.png">
+                    <div class="product-item-text">
+                        <p><span>1990000</span><sup>đ</sup></p>
+                        <h1>Ghế đôn vuông bằng gỗ cao su tự nhiên hiện đại</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/11/24/ghe-boc-ni-khung-sat-thu-gian-clubber-ma-pkgh0011000-homeazvn012446977.png">
+                    <div class="product-item-text">
+                        <p><span>10500000</span><sup>đ</sup></p>
+                        <h1>Ghế bọc nỉ khung sắt thư giãn Clubber</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/11/23/ghe-banh-thu-gian-don-wavy-phong-cach-truu-tuong-ma-pkgh00100000-homeazvn2132319.png">
+                    <div class="product-item-text">
+                        <p><span>6999000</span><sup>đ</sup></p>
+                        <h1>Ghế bành thư giãn đơn Wavy phong cách trừu tượng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/09/22/ghe-sofa-doi-boc-ni-hien-dai-tokyo-ma-pkgh00040000-homeazvn092729290.png">
+                    <div class="product-item-text">
+                        <p><span>2990000</span><sup>đ</sup></p>
+                        <h1>Ghế sofa đôi bọc nỉ hiện đại Tokyo</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/09/29/ghe-tan-co-dien-emery-boc-vai-nhung-ma-ec00001-homeazvn172917277.png">
+                    <div class="product-item-text">
+                        <p><span>1680000</span><sup>đ</sup></p>
+                        <h1>Ghế tân cổ điển Emery bọc vải nhung</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/09/18/ghe-banh-sofa-don-boc-ni-tokyo-ma-pkgh00030000-homeazvn173451685.png">
+                    <div class="product-item-text">
+                        <p><span>2190000</span><sup>đ</sup></p>
+                        <h1>Ghế bành sofa đơn bọc nỉ Tokyo</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/09/18/ghe-banh-sofa-don-thu-gian-bonnie-ma-pkgh00010000-homeazvn163735387.png">
+                    <div class="product-item-text">
+                        <p><span>4490000</span><sup>đ</sup></p>
+                        <h1>Ghế bành sofa đơn thư giãn Bonnie</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/09/17/ghe-banh-don-phong-khach-knox-hien-dai-ma-pkgh00090000-homeazvn-2173021384.png">
+                    <div class="product-item-text">
+                        <p><span>6299000</span><sup>đ</sup></p>
+                        <h1>Ghế bành đơn phòng khách Knox hiện đại</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/27/ghe-massage-toan-than-cao-cap-cong-nghe-4d-1-homeazvn164024528.jpg">
+                    <div class="product-item-text">
+                        <p><span>34900000</span><sup>đ</sup></p>
+                        <h1>Ghế massage toàn thân cao cấp công nghệ 4D</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/04/05/ban-mat-da-hoa-cuong-ban-cafe-go-tu-nhien-cao-cap-ma-bpk005-homeazvn091058588.png">
+                    <div class="product-item-text">
+                        <p><span>13000000</span><sup>đ</sup></p>
+                        <h1>Bàn mặt đá hoa cương - Bàn cafe gỗ tự nhiên cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/04/05/bo-ban-go-phong-khach-phong-cach-hien-dai-ma-bpk003-homeazvn080413260.png">
+                    <div class="product-item-text">
+                        <p><span>39000000</span><sup>đ</sup></p>
+                        <h1>Bộ bàn gỗ phòng khách phong cách hiện đại</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/04/02/ban-sofa-mat-kinh-cuong-luc-phong-cach-hien-dai-ma-bpk004-homeazvn134355447.png">
+                    <div class="product-item-text">
+                        <p><span>19000000</span><sup>đ</sup></p>
+                        <h1>Bàn sofa mặt kính cường lực phong cách hiện đại</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/04/01/mau-ban-tron-phong-khach-mat-da-cao-cap-ma-bpk001-homeazvn102444733.png">
+                    <div class="product-item-text">
+                        <p><span>14000000</span><sup>đ</sup></p>
+                        <h1>Bàn tròn phòng khách mặt đá cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/05/ghe-papasan-may-tu-nhien-tang-kem-nem-ma-gp4-homeazvn173843843.png">
+                    <div class="product-item-text">
+                        <p><span>3400000</span><sup>đ</sup></p>
+                        <h1>Ghế papasan mây tự nhiên tặng kèm</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/07/ban-may-tron-ban-may-tre-dan-gia-re-ma-bm2-homeazvn154659663.png">
+                    <div class="product-item-text">
+                        <p><span>4550000</span><sup>đ</sup></p>
+                        <h1>Bàn mây tròn - Bàn mây tre đan </h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/13/ghe-sofa-may-tre-dan-tu-nhien-cao-cap-ma-s1-homeazvn-214293980.png">
+                    <div class="product-item-text">
+                        <p><span>4900000</span><sup>đ</sup></p>
+                        <h1>Ghế sofa mây tre đan tự nhiên cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/14/ghe-may-sofa-don-may-tu-nhien-cao-cap-ma-s4-homeazvn141915336.png">
+                    <div class="product-item-text">
+                        <p><span>4800000</span><sup>đ</sup></p>
+                        <h1>Ghế mây sofa đơn 100% mây tự nhiên cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/12/ghe-may-tron-papasan-thu-gian-cho-me-bau-duong-kinh-120-cm-ma-gm4-homeazvn-4162637106.png">
+                    <div class="product-item-text">
+                        <p><span>4400000</span><sup>đ</sup></p>
+                        <h1>Ghế mây tròn papasan thư giãn cho mẹ bầu</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/12/ghe-sofa-may-tre-dan-cao-cap-ma-d02-homeazvn14272813.png">
+                    <div class="product-item-text">
+                        <p><span>4200000</span><sup>đ</sup></p>
+                        <h1>Ghế sofa mây tre đan cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/18/ghe-sofa-may-tre-dan-tu-nhien-cao-cap-daybed-homeazvn130958279.png">
+                    <div class="product-item-text">
+                        <p><span>11000000</span><sup>đ</sup></p>
+                        <h1>Ghế sofa mây tre đan tự nhiên cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/07/tu-ke-ngan-phong-khach153640814.png">
+                    <div class="product-item-text">
+                        <p><span>5400000</span><sup>đ</sup></p>
+                        <h1>Tủ kệ ngăn phòng khách cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/24/tu-ruou-dung-ngan-phong-td1243162428190.jpg">
+                    <div class="product-item-text">
+                        <p><span>3840000</span><sup>đ</sup></p>
+                        <h1>Tủ rượu đứng ngăn phòng nhiều</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/09/tu-ruou-trang-tri-ngan-phong-dep-mau-go-homeazvn-1150836999.jpg">
+                    <div class="product-item-text">
+                        <p><span>4590000</span><sup>đ</sup></p>
+                        <h1>Tủ rượu trang trí ngăn phòng đẹp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/09/tu-ruou-ngan-phong-khach-dep-mau-go-homeazvn-1141601808.jpg">
+                    <div class="product-item-text">
+                        <p><span>5119000</span><sup>đ</sup></p>
+                        <h1>Tủ rượu ngăn phòng khách đẹp 3 ngăn kéo cánh mở</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/09/tu-ruou-phong-khach-go-cong-nghiep-hien-dai-homeazvn-1102808731.png">
+                    <div class="product-item-text">
+                        <p><span> 8290000</span><sup>đ</sup></p>
+                        <h1>Tủ rượu phòng khách gỗ công nghiệp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img src="../img/accessory/accessory15/acs15.jpeg">
+                    <div class="product-item-text">
+                        <p><span>632000</span><sup>đ</sup></p>
+                        <h1>Tai nghe nhét trong EarPods Lightning Apple MMTN2</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2020/10/31/ke-de-ruou-vang-kr009-homeaz.vn-.PNG233154731.png">
+                    <div class="product-item-text">
+                        <p><span>1200000</span><sup>đ</sup></p>
+                        <h1>Kệ để rượu vang làm bằng sắt mỹ thuật cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/16/ke-trang-tri-treo-tuong-116421821.jpg">
+                    <div class="product-item-text">
+                        <p><span>480000</span><sup>đ</sup></p>
+                        <h1>Set kệ trang trí treo tường 3 ô vuông lồng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/16/ke-treo-tuong-trang-tri16333057.jpg">
+                    <div class="product-item-text">
+                        <p><span>830000</span><sup>đ</sup></p>
+                        <h1>Set kệ treo tường trang trí tổ ong nhiều</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/14/ke-sach-dung-dep202615718.png">
+                    <div class="product-item-text">
+                        <p><span>1650000</span><sup>đ</sup></p>
+                        <h1>Kệ sách đứng đẹp phong cách Bắc Âu</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/12/ke-sach-hinh-cay-1222219374.jpg">
+                    <div class="product-item-text">
+                        <p><span>890000</span><sup>đ</sup></p>
+                        <h1>Kệ sách hình cây 9 tầng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/24/ke-treo-tuong-trang-tri-td15-2145751793.png">
+                    <div class="product-item-text">
+                        <p><span>860000</span><sup>đ</sup></p>
+                        <h1>Kệ treo tường trang trí hình tổ ong nhiều</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/18/ke-chu-l-trang-tri-homeaz-den151135400.png">
+                    <div class="product-item-text">
+                        <p><span>350000</span><sup>đ</sup></p>
+                        <h1>Kệ chữ L đứng trang trí độc đáo</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/06/18/ke-treo-tuong-phong-khach-bang-go-dep-homeazvn-1103158934.jpg">
+                    <div class="product-item-text">
+                        <p><span>880000</span><sup>đ</sup></p>
+                        <h1>Kệ treo tường phòng khách bằng gỗ đẹp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/07/ghe-xich-du-trong-nha-gia-re-may-tu-nhien-ma-xd2-homeazvn141201532.png">
+                    <div class="product-item-text">
+                        <p><span>6500000</span><sup>đ</sup></p>
+                        <h1>Ghế xích đu trong nhà giá rẻ bằng mây tự nhiên</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/06/ghe-xich-du-may-gia-re-tang-kem-nem-homeazvn-4165656239.png">
+                    <div class="product-item-text">
+                        <p><span>7000000</span><sup>đ</sup></p>
+                        <h1>Ghế xích đu mây giá rẻ 100% mây tự nhiên</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/06/ghe-xich-du-may-tu-nhien-gia-re-hinh-qua-trung-d04-homeazvn161413496.png">
+                    <div class="product-item-text">
+                        <p><span>7500000</span><sup>đ</sup></p>
+                        <h1>Ghế xích đu mây tự nhiên giá rẻ hình quả trứng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/01/05/ghe-xich-du-may-gia-re-hinh-giot-nuoc-ma-xd1-homeazvn165200733.png">
+                    <div class="product-item-text">
+                        <p><span>9000000</span><sup>đ</sup></p>
+                        <h1>Ghế xích đu mây giá rẻ hình quả trứng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/16/den-chum-phong-khach-don-gian-hien-dai-chao-thuy-tinh-cao-cap-homeazvn143840705.png">
+                    <div class="product-item-text">
+                        <p><span>2242500</span><sup>đ</sup></p>
+                        <h1>Đèn chùm phòng khách đơn giản, hiện đại chao thủy tinh cao cấp</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/16/den-chum-chao-thuy-tinh-ban-an-5-bong-den-trang-homeazvn110411655.png">
+                    <div class="product-item-text">
+                        <p><span>3097250</span><sup>đ</sup></p>
+                        <h1>Đèn chùm chao thuỷ tinh bàn ăn 5 bóng đèn trắng</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/15/den-chum-tha-ban-an-hien-dai-cao-cap-kieu-ngang-gan-den-tron-homeazvn12553591.png">
+                    <div class="product-item-text">
+                        <p><span>2652000</span><sup>đ</sup></p>
+                        <h1>Đèn chùm thả bàn ăn hiện đại, cao cấp kiểu ngang gắn đèn tròn DRC-202</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            <div class="product-items">
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/14/den-chum-tha-ban-an-hien-dai-cao-cap-kieu-ngang-than-vang-homeazvn16493166.png">
+                    <div class="product-item-text">
+                        <p><span>2210000</span><sup>đ</sup></p>
+                        <h1>Đèn chùm thả bàn ăn hiện đại, cao cấp kiểu ngang thân vàng DRC-182</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/09/den-chum-phong-khach-chung-cu-hien-dai-homeazvn102321219.png">
+                    <div class="product-item-text">
+                        <p><span>1577000</span><sup>đ</sup></p>
+                        <h1>Đèn chùm phòng khách chung cư hiện đại TH-8028-21/6</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/12/09/den-chum-led-hien-dai-phong-khach-12-bong-den-homeazvn21243034.png">
+                    <div class="product-item-text">
+                        <p><span>2691000</span><sup>đ</sup></p>
+                        <h1>Đèn chùm led hiện đại phòng khách 12 bòng đèn</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/31/tranh-sat-trang-tri-treo-tuong-decor-3-bong-hoa-mai-lon-dcgt00219-homeazvn002038854.png ">
+                    <div class="product-item-text">
+                        <p><span>3000000</span><sup>đ</sup></p>
+                        <h1>Tranh sắt trang trí treo tường decor 3 bông hoa mai lớn DCGT00219</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/28/hoa-sat-treo-tuong-nghe-thuat-decor-canh-vang-nhuy-trang-ma-dcgt00156-homeazvn162224821.png">
+                    <div class="product-item-text">
+                        <p><span>2500000</span><sup>đ</sup></p>
+                        <h1>Hoa sắt treo tường nghệ thuật decor cánh vàng nhụy trắng mã DCGT00156</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product-item">
+                    <img
+                        src="https://i2.ex-cdn.com/homeaz.vn/files/sanpham/2021/07/31/tranh-sat-trang-tri-phong-khach-decor-la-duong-xi-dcgt00238-homeazvn203510324.png">
+                    <div class="product-item-text">
+                        <p><span>4500000</span><sup>đ</sup></p>
+                        <h1>Tranh sắt trang trí phòng khách decor lá dương xỉ DCGT00238</h1>
+                    </div>
+                    <button>Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order">
+        <h2>Đặt Hàng</h2>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+            </table>
+            <div class="price-total">
+                <p style="font-size: px;font-weight: bold;">Tổng tiền:<span>0</span><sup>đ</sup></p>
+            </div>
+        </form>
+    </section>
+    <div class="mua-hang">
+
+        <button class="btn-nut-mua-hang">Thanh Toán</button>
+
+    </div>
+    <!-- ---------------------footer thông tin ------------------------------- -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- <div class="footer-container-content"> -->
+            <div class="content-one">
+                <ul>
+                    <li>
+                        <h2>Sản phẩm</h2>
+                    </li>
+                    <li><a href="">Phòng ngủ</a></li>
+                    <li><a href="">Phòng ăn</a></li>
+                    <li><a href="">Phòng khác</a></li>
+                    <li><a href="">Phòng bếp</a></li>
+                    <li><a href="">Phòng học/ Làm việc</a></li>
+                </ul>
+            </div>
+            <div class="content-two">
+                <ul>
+                    <li>
+                        <h2>Thông tin</h2>
+                    </li>
+                    <li><a href="">Giới thiệu về công ty</a></li>
+                    <li><a href="">Chính sách bảo mật</a></li>
+                    <li><a href="">Chính sách bảo hành</a></li>
+                    <li><a href="">Khách hàng thân thiết</a></li>
+                    <li><a href="">Chính sách đổi trả</a></li>
+                    <li><a href="">Chính sách trả góp</a></li>
+                </ul>
+            </div>
+            <div class="content-three">
+                <ul>
+                    <li>
+                        <h2>Tài khoản</h2>
+                    </li>
+                    <li><a href="">Lịch sử mua hàng</a></li>
+                    <li><a href="">Tài khoản của tôi</a></li>
+                    <li><a href="">Khuyến mãi</a></li>
+                    <li><a href="">Sản phẩm yêu thích</a></li>
+                </ul>
+            </div>
+            <div class="content-four">
+                <ul>
+                    <li>
+                        <h2>Liên hệ với chúng tôi</h2>
+                    </li>
+                    <li><a href="">Địa chỉ: Nguyễn Văn Bảo, phường 4, Quận Gò Vấp, thành phố Hồ Chí Minh</a></li>
+                    <li><a href="">Tư vấn mua hàng: 0368636452</a></li>
+                    <li><a href="">Tư vấn kĩ thuật: 0327003644</a></li>
+                    <li><a href="">Email: 21025691.iuh@gmail.com</a></li>
+                    <li><a href="../html/sitemap.html"> Site Map</a></li>
+                </ul>
+            </div>
+            <!-- </div>  -->
+        </div>
+    </footer>
+
+
+
+    <script src="../js/giohang.js"></script>
+
+</body>
+
+</html>

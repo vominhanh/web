@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Nội Thất</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo1.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="../js/products.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#tenSP").html(localStorage.getItem("ten"));
+            $("#pic").attr("src", localStorage.getItem("hinhanh"));
+            $("#pic1").attr("src", localStorage.getItem("hinhanh"));
+            $("#reviewSP").html(localStorage.getItem("review"));
+            $("#giaSP").html(localStorage.getItem("gia"));
+            $("#loaiSP").html(localStorage.getItem("loai"));
+            $("#review").html(localStorage.getItem("review"));
+            $("#chatlieu").html(localStorage.getItem("chatlieu"));
+            $("#danhgia").html(localStorage.getItem("danhgia"));
+            $("#loai").html(localStorage.getItem("loai"));
+            $("#kichthuoc").html(localStorage.getItem("kichthuoc"));
+            $("#khoiluong").html(localStorage.getItem("khoiluong"));
+            $("#khoiluongvo").html(localStorage.getItem("khoiluongvo"));
+            $("#mausac").html(localStorage.getItem("mausac"));
+            $("#baogom").html(localStorage.getItem("baogom"));
+
+
+        });
+    </script>
+    <style>
+        .contai {
+            background-color: rgb(236, 236, 255);
+        }
+
+        .slider {
+            margin: 30px;
+            height: 250px;
+        }
+
+        .slider-container-right {
+            display: block;
+            flex-wrap: wrap;
+            padding: 0;
+            justify-content: space-around;
+        }
+
+        .slider-container-right li {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            margin-bottom: 2px;
+
+        }
+
+        .slider-container-right li img {
+            width: 320px;
+            height: 122px;
+            border-radius: 5px;
+        }
+
+        .slider-container-left-top {
+            height: 250px;
+        }
+
+        .slider-container-left-bottom {
+            height: 0px;
+        }
+
+        .container a {
+            color: #E5322A;
+            text-decoration: none;
+        }
+
+        .footer-container a {
+            text-decoration: none;
+        }
+
+        .menu-bar-container {
+
+            margin-top: -16px;
+        }
+
+        .baner-one {
+            height: 200px;
+        }
+
+        .img1 {
+            border-radius: 60px;
+            background-color: rgb(62, 178, 241);
+            width: 100px;
+        }
+
+        .img2 {
+            border-radius: 60px;
+            background-color: rgb(244, 145, 207);
+            width: 100px;
+        }
+
+        .img3 {
+            border-radius: 60px;
+            background-color: rgb(255, 0, 0);
+            width: 100px;
+        }
+
+        .img4 {
+            border-radius: 60px;
+            background-color: rgb(178, 255, 152);
+            width: 100px;
+        }
+
+        .img5 {
+            border-radius: 60px;
+            background-color: rgb(170, 243, 238);
+            width: 100px;
+        }
+
+        .baner-one-content-text h4 {
+            font-weight: bold;
+            font-size: 22px;
+            padding: 10px;
+        }
+
+        .baner-one-content a {
+            color: #333;
+            font-size: 15px;
+            align-items: center;
+        }
+
+        .baner-two-content-one img {
+            width: 140px;
+        }
+
+        .baner-two-content-one p {
+            width: 140px;
+            height: 15px;
+            color: rgb(75, 182, 61);
+            font-size: 17px;
+            line-height: 30px;
+        }
+
+        .baner-three {
+            margin-top: 50px;
+        }
+
+        .baner-three-content img {
+            width: 50%;
+        }
+
+        .product-gallery-three-content-title li {
+            background-color: rgb(252, 252, 252);
+            width: auto;
+        }
+
+        .product-gallery-three-content-title ul li a {
+            font-size: 15px;
+        }
+
+        .product-gallery-three-content-title {
+            justify-content: center;
+        }
+
+        .product-gallery-three-content-product {
+            margin-top: -20px;
+        }
+
+        .baner-one-text {
+            display: flex;
+            border-top: 3px solid #ddd;
+            margin-top: -10px;
+            padding-top: 10px;
+        }
+
+        .baner-one-text h1 {
+            font-weight: bold;
+            font-size: 21px;
+        }
+
+        .baner-one-text i {
+            color: rgb(255, 0, 0);
+            font-size: 14px;
+        }
+
+        .baner-one-text div {
+            padding: 0px 8px;
+        }
+
+        .baner-one-product img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .baner-one-product-text1 {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: rgb(255, 153, 0);
+            font-weight: bold;
+        }
+
+        .baner-one-product-text1 h3 {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .baner-one-product-text1 span {
+            font-size: 14px;
+        }
+
+        .baner-one-product-text2 {
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            line-height: 23px;
+        }
+
+        .baner-one-product-text2 span {
+            color: rgb(0, 136, 255);
+            font-size: 15px;
+        }
+
+        .baner-one-product-text3 {
+            margin-top: 10px;
+            padding: 10px;
+            color: #ddd;
+        }
+
+        .btn {
+            border-radius: 5px;
+            width: 100%;
+            height: 50px;
+            background-color: #FB6E2E;
+            color: #ddd;
+            font-size: 18px;
+        }
+
+        .baner-one-product-text3:hover .btn {
+            color: #820404;
+        }
+
+        .baner-one-product-text4 {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .baner-one {
+            height: 500px;
+        }
+
+        .product-gallery-one-content-title {
+            background-color: #FB6E2E;
+            border-radius: 20px;
+        }
+
+        .product-gallery-one-content-title h2 {
+            color: white;
+            margin-left: 40%;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .st-card {
+            box-shadow: 0 0 3px 0 #dee2e6;
+            border-radius: 6px;
+            border: 1px solid white;
+        }
+
+        h3.card-title {
+            font-size: 20px;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+
+        .card-body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .st-pd-table {
+            margin: 0 auto;
+        }
+
+        .st-pd-table tr:nth-child(odd) {
+            background-color: #f3f4f7;
+        }
+
+        .st-pd-table td:first-child {
+            width: 120px;
+        }
+
+        .st-pd-table td {
+            border: 1px solid #dee2e6;
+            padding: 6px 10px;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .chitiet {
+            height: 500px;
+        }
+
+        .baner-one-product {
+            display: flex;
+            position: relative;
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 24px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .panel h3#tieude {
+            color: black;
+            font-weight: bold;
+            font-size: 28px;
+            text-align: justify;
+            line-height: 30px;
+            margin: 20px 0 15px 0;
+        }
+
+        .panel h3#ndchinh {
+            color: rgb(254, 51, 51);
+            font-weight: bold;
+        }
+
+        .panel>p {
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .panel img {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><img style="height: 50px;width: 50px;" src="../img/Logo1.png " alt=""
+                            style="width: 200px;height: 40 px;"></a>
+
+                <li><input style="height: 35px;width: 600px;border-radius: 5px;" type="text"
+                        placeholder="  Tìm kiếm sản phẩm ..... "><i class="fa fa-search" aria-hidden="true"></i></li>
+                <li><a href="GioHang.html">
+                        <button>
+                            <img style="height: 20px;width: 20px;color: #E5322A;" src="../img/shopping-cart.png" alt="">
+                            <b style="padding-top: 30px;">Giỏ Hàng</b>
+
+                        </button> </a> </li>
+                <li>
+                    <a href="Login.html">
+                        <img style="height: 50px;width: 50px;margin-top: 10px;margin-bottom: 10px;"
+                            src="../img/profile.png" alt="">
+                    </a>
+                </li>
+
+
+
+        </div>
+        </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container" style="background-color: rgb(228, 228, 255);border-radius: 5px;">
+            <div class="menu-bar-container">
+                <ul>
+                    <li><a href="index.html">Danh mục sản phẩm </a></li>
+                    <li><a href="sanpham.html"><i class="" aria-hidden="true"></i> Sản phẩm chính hãng </a>
+                    </li>
+                    <li><a href="sanpham.html"><i class="" aria-hidden="true"></i> Sản phẩm nội thất
+                            <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="index.html"> Ghế</a></li>
+                                <li><a href="index.html"> Bàn </a></li>
+                                <li><a href="index.html"> Tủ sách</a></li>
+                                <li><a href="index.html"> Tủ rượu</a></li>
+                                <li><a href="index.html"> Đèn treo tường</a></li>
+                                <li><a href="index.html"> Giường</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="DiaChi.html"> Địa Chỉ</a></li>
+                    <li><a href="#"> Giới thiệu</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="GioiThieuWeb.html">Giới thiệu trang web</a></li>
+                                <li><a href="GioiThieuThanhVien.html">Giới thiệu thành viên</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ------------------Chi tiết----------------------- -->
+    <section class="chitiet">
+        <div class="baner-one">
+            <div class="container" style="background-color: #e9eafdf7;border-radius: 10px;">
+                <div class="baner-one-text" style="margin-top: 20px;">
+
+                    <h1 id="tenSP"></h1>
+                    <div id="danhgia">
+                    </div>
+                    <p id="review" style="margin-left: -5px;"></p>
+
+                    <p>&nbspĐánh giá</p>
+                </div>
+
+                <div class="baner-one-product">
+                    <div class="col-5">
+                        <img src alt id="pic" style="height: 440px; width: 440px;border-radius: 10px;">
+                    </div>
+                    <div class="row-3" style="margin-left: 40px;">
+                        <div class="col-13" style="margin-left: 20px; background-color: #ffffff;border-radius: 10px;">
+                            <h2 style="margin-left: 10px;color: #E5322A;" id="giaSP"></h2>
+                            <div class="baner-one-product-text1">
+                                <h3 style="font-weight: bold;color: red;">ƯU ĐÃI SỐC</h3>
+                                <input type="checkbox" checked> <span>Khách hàng sẽ
+                                    được giảm <b>20.000 <sup>đ</sup></b>
+                                    khi thanh toán bằng MB Bank</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-13 thongsokythuat" style="margin-left: 20px;margin-top: 10px;">
+                            <div class="card re-card st-card">
+                                <h3 class="card-title text-center font-weight-bold">Thông
+                                    số kỹ thuật</h3>
+                                <div class="card-body-center ">
+                                    <table class="st-pd-table ">
+                                        <tbody>
+                                            <tr>
+                                                <td>Chất liệu</td>
+                                                <td id="chatlieu"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kích thước</td>
+                                                <td id="kichthuoc"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Khối lượng (cả xốp)</td>
+                                                <td id="khoiluong"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Khối lượng vỏ</td>
+                                                <td id="khoiluongvo"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Màu sắc</td>
+                                                <td id="mausac"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gói hàng bao gồm</td>
+                                                <td id="baogom"></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="baner-one-product-text3 " style="margin-left: 15px;">
+                            <a href="../html/GioHang.html"><button class="btn"><i class="fa fa-cart-plus"
+                                        aria-hidden="true"></i> Đi tới giỏ
+                                    hàng</button></a>
+                        </div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section product-details__section">
+            <div class="product-detail__bottom " style="margin-top: 70px;">
+                <div class="title__container tabs">
+                    <br>
+                    <button class="accordion" style="border-radius: 10px;">Thông tin sản phẩm</button>
+                    <div class="panel" style="border-radius: 10px;">
+                        <br>
+                        <h3 id="tieude">Combo bọc ghế lười hạt xốp màu đỏ.</h3>
+                        <br>
+                        <h3 id="">Ưu điểm của Combo bọc ghế lười hạt xốp màu đỏ hoa văn cỡ 70x70cm
+                            Combo vỏ ghế lười hạt xốp màu đỏ hoa văn cho bạn thêm điểm tựa thư giãn mềm mại:
+                            Bạn cảm thấy chiếc ghế nhà mình đang quá cứng hoặc ngồi vẫn còn khó chịu? Vậy thì combo bọc
+                            ghế lười hạt xốp này sẽ là một giải pháp lý tưởng dành cho bạn. Combo ghế lười hạt xốp với
+                            chất vải canvas mềm mại và thoải mái, có thể dễ dàng tháo ra vệ sinh. Hơn nữa còn có độ bền
+                            cao và khả năng chống thấm nước tốt. Combo vỏ ghế thư giãn gồm 1 vỏ bọc bằng vải và hạt xốp
+                            hỗ trợ hoàn hảo cho cơ thể có thể thoải mái khi ngồi, ngủ trưa hay thư giãn. Đây cũng là một
+                            món phụ kiện trang trí ấn tượng, phù hợp cho phòng khách, phòng ngủ, văn phòng, quán cà
+                            phê,...
+
+                            Hướng dẫn vệ sinh Combo vỏ bọc ghế lười hạt xốp màu đỏ hoa văn:
+                            Vệ sinh ghế lười hạt xốp thường xuyên và sạch sẽ là một việc cần thiết để giúp đảm bảo an
+                            toàn sức khỏe cho gia đình và cho không gian. Dưới đấy là 2 cách cho bạn vệ sinh dễ dàng:
+
+                            <br>
+                            <br>
+                            <b>- Cách 1: Đổ hạt xốp vào 1 túi nilon hoặc bao to, sau đó giặt vỏ ghế lười hạt xốp bằng
+                                máy
+                                giặt như giặt quần áo bình thường.</b>
+                            <br>
+                            <br>
+                            <b>- Cách 2: Sử dụng máy hút bụi hoặc máy giặt cầm tay dùng cho sofa hoặc mang đến tiệm
+                                giặt.</b>
+
+                            <br>
+                            <img src alt id="pic1" style="height: 440px; width: 440px;">
+                        </h3>
+                        <br>
+                        <img src alt id="hinhanhchitiet">
+                        <br><br>
+                        <p id="noidungchitiet"></p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------footer thông tin ------------------------------- -->
+            <footer class="footer" style="border-radius: 10px;">
+                <div class="footer-container">
+                    <div class="content-one">
+                        <ul>
+                            <li>
+                                <h2>Sản phẩm</h2>
+                            </li>
+                            <li><a href="">Phòng ngủ</a></li>
+                            <li><a href="">Phòng ăn</a></li>
+                            <li><a href="">Phòng khác</a></li>
+                            <li><a href="">Phòng bếp</a></li>
+                            <li><a href="">Phòng học/ Làm việc</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-two">
+                        <ul>
+                            <li>
+                                <h2>Thông tin</h2>
+                            </li>
+                            <li><a href>Giới thiệu về công ty</a></li>
+                            <li><a href>Chính sách bảo mật</a></li>
+                            <li><a href>Chính sách bảo hành</a></li>
+                            <li><a href>Khách hàng thân thiết</a></li>
+                            <li><a href>Chính sách đổi trả</a></li>
+                            <li><a href>Chính sách trả góp</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-three">
+                        <ul>
+                            <li>
+                                <h2>Tài khoản</h2>
+                            </li>
+                            <li><a href>Lịch sử mua hàng</a></li>
+                            <li><a href>Tài khoản của tôi</a></li>
+                            <li><a href>Khuyến mãi</a></li>
+                            <li><a href>Sản phẩm yêu thích</a></li>
+                        </ul>
+                    </div>
+                    <div class="content-four">
+                        <ul>
+                            <li>
+                                <h2>Liên hệ với chúng tôi</h2>
+                            </li>
+                            <li><a href>Địa chỉ: Nguyễn Văn Bảo, phường 4, Quận
+                                    Gò Vấp, thành phố Hồ Chí Minh</a>
+                            </li>
+                            <li><a href>Tư vấn mua hàng: 0368636452</a></li>
+                            <li><a href>Email: 21025691.iuh@gmail.com</a></li>
+                            <li><a href="../html/sitemap.html"> Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.maxHeight) {
+                            panel.style.maxHeight = null;
+                        } else {
+                            panel.style.maxHeight = panel.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
+            <script src="../js/script.js"></script>
+</body>
+
+</html>
